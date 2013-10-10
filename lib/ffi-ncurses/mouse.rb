@@ -137,7 +137,7 @@ module FFI
       functions.each do |function|
         begin
           attach_function(*function)
-        rescue Object => e
+        rescue Object
           (@unattached_functions ||= []) << function
         end
       end
